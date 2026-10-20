@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SANTANNA // Rafael Sant' Anna dos Santos — Portfólio</title>
+  <meta name="description" content="Portfólio escolar de Rafael Sant' Anna dos Santos - 3º Ano do Ensino Médio Técnico de T.I no Colégio Raphael Di Santo.">
+  
+  <!-- Fontes de Alta Moda & Editorial (Estilo jjettas.com): Syne, Anton, Space Grotesk & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- CSS Separado (Estilo JJettas Editorial) -->
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Space Grotesk"', 'sans-serif'],
+            editorial: ['Syne', 'sans-serif'],
+            condensed: ['Anton', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            dark: {
+              950: '#060607',
+              900: '#0b0b0d',
+              850: '#111114',
+              800: '#18181c',
+              700: '#26262d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-950 text-neutral-100 font-sans selection:bg-white selection:text-black">
+
+  <!-- ========================================================= -->
+  <!-- TELA DE CARREGAMENTO / PRELOADER (Estilo Editorial)       -->
+  <!-- ========================================================= -->
+  <div id="preloader">
+    <div class="text-center px-6 max-w-md">
+      <!-- Tag de Carregamento -->
+      <div class="font-mono text-[11px] tracking-widest uppercase text-neutral-500 mb-3">
+        [ SYSTEM INITIALIZATION // 3º ANO T.I ]
+      </div>
+
+      <!-- Nome Gigante -->
+      <h2 class="font-condensed text-5xl sm:text-7xl text-white tracking-tight mb-2">
+        SANTANNA
+      </h2>
+      <p class="font-mono text-xs uppercase tracking-widest text-neutral-400 mb-8">
+        COLÉGIO RAPHAEL DI SANTO • GUSTAWEB
+      </p>
+
+      <!-- Barra de Progresso com Contador -->
+      <div class="loader-bar-wrap mx-auto mb-4">
+        <div id="loaderBarFill" class="loader-bar-fill"></div>
+      </div>
+
+      <div class="flex items-center justify-between text-[11px] font-mono text-neutral-400 mb-8 max-w-[240px] mx-auto">
+        <span id="loaderStatusText">CARREGANDO ASSETS...</span>
+        <span id="loaderPercent" class="text-white font-bold">0%</span>
+      </div>
+
+      <!-- Botão de Entrada para ativar áudio e desbloquear -->
+      <button 
+        id="enterBtn" 
+        class="jj-btn-primary px-8 py-3.5 rounded-full text-xs font-bold inline-flex items-center gap-2 enter-btn-pulse transition-all">
+        <span>ENTRAR NO SITE COM SOM</span>
+        <i data-lucide="volume-2" class="w-4 h-4"></i>
+      </button>
+
+      <p class="text-[10px] font-mono text-neutral-500 mt-4 uppercase tracking-wider">
+        A trilha sonora se iniciará automaticamente
+      </p>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- TOP ANNOUNCEMENT BAR (Editorial JJettas vibe)              -->
+  <!-- ========================================================= -->
+  <div class="w-full bg-dark-900 border-editorial-b py-2 px-6 flex justify-between items-center text-[11px] font-mono tracking-widest uppercase text-neutral-400">
+    <div class="flex items-center gap-2">
+      <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+      <span>COLÉGIO RAPHAEL DI SANTO // CAMPINAS - SP</span>
+    </div>
+    <div class="hidden sm:flex items-center gap-6">
+      <span>DISCIPLINA: GUSTAWEB</span>
+      <span>TURMA: 3º ANO T.I</span>
+      <span class="text-white font-bold">SLOGAN: “SABEDORIA”</span>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- NAVIGATION BAR (Minimalista, Clean & High-Contrast)       -->
+  <!-- ========================================================= -->
+  <header id="navbar" class="jj-nav fixed top-8 left-0 right-0 z-50 py-5">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
+      
+      <!-- Brand Logo / Wordmark -->
+      <a href="#hero" class="group flex items-center gap-3">
+        <div class="text-2xl font-condensed tracking-normal text-white group-hover:text-neutral-300 transition-colors">
+          SANTANNA<span class="text-neutral-500 font-mono text-sm ml-1.5">[18]</span>
+        </div>
+      </a>
+
+      <!-- Menu Central (Estilo editorial jjettas: ON-FIELD, OFF-FIELD, ETC) -->
+      <nav class="hidden md:flex items-center gap-10 text-xs font-mono font-medium tracking-widest uppercase text-neutral-400">
+        <a href="#sobre" class="hover:text-white transition-colors">01 // SOBRE MIM</a>
+        <a href="#rotina" class="hover:text-white transition-colors">02 // ROTINA & HOBBIES</a>
+        <a href="#projetos" class="hover:text-white transition-colors">03 // PROJETOS</a>
+        <a href="#video-destaque" class="hover:text-white transition-colors">04 // VÍDEO RDS</a>
+        <a href="#contato" class="hover:text-white transition-colors">05 // CONTATO</a>
+      </nav>
+
+      <!-- Botão Direita CTA -->
+      <div class="hidden md:block">
+        <a href="#contato" class="jj-btn-primary px-5 py-2.5 rounded-full text-xs inline-flex items-center gap-2">
+          <span>INQUIRIES / CONTATO</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <!-- Botão Mobile -->
+      <button id="mobileMenuBtn" aria-label="Abrir menu" class="md:hidden p-2 text-white">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Dropdown Mobile -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 py-6 bg-dark-900 border-editorial-b mt-3">
+      <div class="flex flex-col gap-4 text-xs font-mono tracking-widest uppercase">
+        <a href="#sobre" class="mobile-link text-neutral-300 hover:text-white py-1">01 // SOBRE MIM</a>
+        <a href="#rotina" class="mobile-link text-neutral-300 hover:text-white py-1">02 // ROTINA & HOBBIES</a>
+        <a href="#projetos" class="mobile-link text-neutral-300 hover:text-white py-1">03 // PROJETOS</a>
+        <a href="#video-destaque" class="mobile-link text-neutral-300 hover:text-white py-1">04 // VÍDEO RDS</a>
+        <a href="#contato" class="mobile-link text-neutral-300 hover:text-white py-1">05 // CONTATO</a>
+        <a href="#contato" class="mobile-link jj-btn-primary text-center py-3 rounded-full mt-2 font-bold">FALAR COMIGO</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- HERO SECTION (High-Fashion, Immersive, Bold Typography)   -->
+  <!-- ========================================================= -->
+  <section id="hero" class="relative min-h-screen flex flex-col justify-end overflow-hidden pb-16 pt-36">
+    
+    <!-- Background Video Integrado (O novo vídeo solicitado) -->
+    <div class="jj-video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/orqpgpW-fsk?autoplay=1&mute=1&controls=0&loop=1&playlist=orqpgpW-fsk&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&enablejsapi=1" 
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen
+        title="Colégio Raphael Di Santo Vídeo Oficial">
+      </iframe>
+    </div>
+
+    <!-- Overlays Monocromáticos e Cinematográficos -->
+    <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/75 to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-dark-950/90 via-transparent to-dark-950/90 z-10 pointer-events-none"></div>
+
+    <!-- Conteúdo Hero -->
+    <div class="relative z-20 max-w-[1400px] mx-auto px-6 lg:px-12 w-full">
+      
+      <!-- Linha superior de contexto -->
+      <div class="flex flex-wrap items-center gap-4 mb-6 reveal">
+        <span class="jj-tag">COLÉGIO RAPHAEL DI SANTO</span>
+        <span class="jj-tag">3º ANO DO ENSINO MÉDIO TÉCNICO</span>
+        <span class="jj-tag font-mono text-white">REDES DE COMPUTADORES</span>
+      </div>
+
+      <!-- Nome Gigantesco Estilo JJETTAS -->
+      <div class="mb-8 reveal reveal-delay-1">
+        <h1 class="font-condensed text-6xl sm:text-8xl md:text-9xl lg:text-[140px] leading-[0.88] tracking-tight uppercase text-white">
+          RAFAEL <br>
+          <span class="text-neutral-400 hover:text-white transition-colors duration-500">SANT’ ANNA</span>
+        </h1>
+      </div>
+
+      <!-- Grid Editorial Inferior do Hero -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end border-editorial-t pt-8 reveal reveal-delay-2">
+        
+        <div class="md:col-span-6">
+          <p class="font-mono text-xs uppercase tracking-widest text-neutral-400 mb-2">MANIFESTO // SLOGAN</p>
+          <p class="text-2xl sm:text-3xl font-editorial font-bold text-white tracking-tight">
+            “SABEDORIA”
+          </p>
+          <p class="text-sm text-neutral-400 mt-2 max-w-lg leading-relaxed font-normal">
+            Portfólio escolar e hub digital do aluno Rafael Sant’ Anna dos Santos (Santanna). Focado em lógica matemática, desenvolvimento front-end moderno e futura formação em Redes de Computadores.
+          </p>
+        </div>
+
+        <div class="md:col-span-3">
+          <p class="font-mono text-xs uppercase tracking-widest text-neutral-400 mb-2">CURADORIA ACADÊMICA</p>
+          <p class="text-sm text-white font-medium">Disciplina: GustaWeb</p>
+          <p class="text-xs text-neutral-400 mt-0.5">Campinas, São Paulo — Brasil</p>
+        </div>
+
+        <div class="md:col-span-3 flex flex-col sm:flex-row gap-3">
+          <a href="#projetos" class="jj-btn-primary px-6 py-3 rounded-full text-xs text-center flex-1">
+            VER PROJETOS
+          </a>
+          <a href="#video-destaque" class="jj-btn-secondary px-6 py-3 rounded-full text-xs text-center flex-1 flex items-center justify-center gap-1.5">
+            <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+            <span>VÍDEO RDS</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- MARQUEE RUNNER (Elemento Típico jjettas.com / Off-White)   -->
+  <!-- ========================================================= -->
+  <div class="w-full bg-white text-black py-3 overflow-hidden border-editorial-b font-condensed text-2xl tracking-wider select-none">
+    <div class="marquee-track flex gap-8 items-center">
+      <span>RAFAEL SANT’ ANNA</span>
+      <span>•</span>
+      <span>SABEDORIA</span>
+      <span>•</span>
+      <span>COLÉGIO RAPHAEL DI SANTO</span>
+      <span>•</span>
+      <span>3º ANO T.I</span>
+      <span>•</span>
+      <span>GUSTAWEB</span>
+      <span>•</span>
+      <span>MATEMÁTICA & PROGRAMAÇÃO</span>
+      <span>•</span>
+      <span>REDES DE COMPUTADORES</span>
+      <span>•</span>
+      <span>RAFAEL SANT’ ANNA</span>
+      <span>•</span>
+      <span>SABEDORIA</span>
+      <span>•</span>
+      <span>COLÉGIO RAPHAEL DI SANTO</span>
+      <span>•</span>
+      <span>3º ANO T.I</span>
+      <span>•</span>
+      <span>GUSTAWEB</span>
+      <span>•</span>
+      <span>MATEMÁTICA & PROGRAMAÇÃO</span>
+      <span>•</span>
+      <span>REDES DE COMPUTADORES</span>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- SEÇÃO 01 // SOBRE MIM (Editorial & Career Focus)          -->
+  <!-- ========================================================= -->
+  <section id="sobre" class="py-28 max-w-[1400px] mx-auto px-6 lg:px-12">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Coluna Esquerda: Cabeçalho da seção com numeração -->
+      <div class="lg:col-span-5 space-y-6 reveal">
+        <div class="font-mono text-xs tracking-widest text-neutral-400 uppercase">
+          [ 01 // PROFILE & BACKGROUND ]
+        </div>
+        <h2 class="font-condensed text-5xl sm:text-7xl uppercase text-white leading-none">
+          QUEM É O <br>
+          <span class="text-neutral-400">SANTANNA</span>
+        </h2>
+        <div class="p-6 jj-card rounded-xl border-l-2 border-l-white">
+          <p class="font-mono text-xs uppercase tracking-widest text-neutral-400 mb-1">IDENTIFICAÇÃO FORMAL</p>
+          <p class="text-lg font-bold text-white">Rafael Sant’ Anna dos Santos</p>
+          <p class="text-xs text-neutral-400 mt-1">Conhecido carinhosamente pelos amigos como <strong class="text-white">Santanna</strong>.</p>
+        </div>
+      </div>
+
+      <!-- Coluna Direita: Narrativa Biográfica baseada no PDF -->
+      <div class="lg:col-span-7 space-y-6 text-neutral-300 text-base sm:text-lg leading-relaxed font-light reveal reveal-delay-1">
+        <p class="text-white text-xl font-normal leading-normal">
+          Sou estudante do <strong class="underline decoration-1 underline-offset-4">3º Ano do Ensino Médio Técnico em Informática (T.I)</strong> no conceituado Colégio Raphael Di Santo, em Campinas.
+        </p>
+        <p>
+          Minha formação une o rigor acadêmico com a prática em programação web. Tenho afinidade natural com a área de <strong class="text-white font-medium">Matemática</strong> e me dedico ativamente ao universo da computação. Embora goste muito de programar e criar telas com tecnologias web modernas, meu maior objetivo profissional para o pós-ensino médio é ingressar na faculdade de <strong class="text-white font-medium">Redes de Computadores</strong>, explorando arquitetura de tráfego, infraestrutura e conectividade.
+        </p>
+        <p>
+          Mantenho uma postura disciplinada e metódica em tudo o que faço — desde o cumprimento dos horários e responsabilidades domésticas até a entrega pontual de cada código e projeto prático solicitado pelo professor na disciplina GustaWeb.
+        </p>
+
+        <!-- Stats Bar estilo jjettas -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-editorial-t">
+          <div>
+            <div class="stat-number text-4xl sm:text-5xl text-white">03º</div>
+            <div class="font-mono text-[11px] uppercase text-neutral-400 mt-1">Ano Técnico TI</div>
+          </div>
+          <div>
+            <div class="stat-number text-4xl sm:text-5xl text-white">05:00</div>
+            <div class="font-mono text-[11px] uppercase text-neutral-400 mt-1">Despertar Diário</div>
+          </div>
+          <div>
+            <div class="stat-number text-4xl sm:text-5xl text-white">100%</div>
+            <div class="font-mono text-[11px] uppercase text-neutral-400 mt-1">Foco em Redes</div>
+          </div>
+          <div>
+            <div class="stat-number text-4xl sm:text-5xl text-white">RDS</div>
+            <div class="font-mono text-[11px] uppercase text-neutral-400 mt-1">Colégio Raphael Di Santo</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- SEÇÃO 02 // ROTINA & HOBBIES (Daily Schedule + Lifestyle) -->
+  <!-- ========================================================= -->
+  <section id="rotina" class="py-24 bg-dark-900 border-editorial-t border-editorial-b">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      
+      <!-- Cabeçalho -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 reveal">
+        <div>
+          <div class="font-mono text-xs tracking-widest text-neutral-400 uppercase mb-2">
+            [ 02 // LIFESTYLE & ROUTINE ]
+          </div>
+          <h2 class="font-condensed text-5xl sm:text-7xl uppercase text-white leading-none">
+            ROTINA DIÁRIA <br>
+            <span class="text-neutral-400">& MOMENTOS LIVRES</span>
+          </h2>
+        </div>
+        <p class="text-neutral-400 max-w-md text-sm font-mono uppercase tracking-wider">
+          A estrutura de hábitos que constrói foco: do início da madrugada às paixões do fim de semana.
+        </p>
+      </div>
+
+      <!-- Grade da Rotina Semana (Extraído do rascunho do PDF) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+        
+        <div class="jj-card p-6 rounded-xl reveal">
+          <div class="font-mono text-xs text-neutral-500 uppercase mb-4">[ ETAPA 01 // 05:00 AM ]</div>
+          <div class="stat-number text-4xl text-white mb-2">05H00</div>
+          <h3 class="text-base font-bold text-white mb-2">Higiene & Café</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed font-light">
+            Acordo rigorosamente às 5h da manhã, faço minha higiene pessoal, coloco o uniforme escolar e tomo meu café da manhã reforçado.
+          </p>
+        </div>
+
+        <div class="jj-card p-6 rounded-xl reveal reveal-delay-1">
+          <div class="font-mono text-xs text-neutral-500 uppercase mb-4">[ ETAPA 02 // 06:00 AM ]</div>
+          <div class="stat-number text-4xl text-white mb-2">06H00</div>
+          <h3 class="text-base font-bold text-white mb-2">Transporte & Escola</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed font-light">
+            A van escolar passa pontualmente para o embarque rumo ao Colégio Raphael Di Santo, iniciando a grade de aulas e laboratório de informática.
+          </p>
+        </div>
+
+        <div class="jj-card p-6 rounded-xl reveal reveal-delay-2">
+          <div class="font-mono text-xs text-neutral-500 uppercase mb-4">[ ETAPA 03 // TARDE ]</div>
+          <div class="stat-number text-4xl text-white mb-2">13H00</div>
+          <h3 class="text-base font-bold text-white mb-2">Almoço & Organização</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed font-light">
+            Retorno para casa após as aulas: almoço, lavo a louça e realizo uma limpeza básica no ambiente doméstico para manter tudo organizado.
+          </p>
+        </div>
+
+        <div class="jj-card p-6 rounded-xl reveal reveal-delay-3">
+          <div class="font-mono text-xs text-neutral-500 uppercase mb-4">[ ETAPA 04 // TARDE/NOITE ]</div>
+          <div class="stat-number text-4xl text-white mb-2">ESTUDOS</div>
+          <h3 class="text-base font-bold text-white mb-2">Tarefas & Código</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed font-light">
+            Checagem minuciosa de lições e trabalhos escolares. Se houver atividades, executo de imediato; senão, busco novos aprendizados.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Grid de Hobbies & Lazer (Autoescola PPD, Bike, Games) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="jj-card p-8 rounded-xl reveal">
+          <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white mb-6">
+            <i data-lucide="car" class="w-5 h-5"></i>
+          </div>
+          <span class="jj-tag mb-3">CONQUISTA EM ANDAMENTO</span>
+          <h4 class="text-xl font-bold text-white mb-2">Aulas de Carro (PPD)</h4>
+          <p class="text-xs text-neutral-400 leading-relaxed font-light">
+            Iniciei as aulas práticas de direção veicular com foco em conquistar a Permissão Para Dirigir (PPD), dando um passo crucial na autonomia pessoal.
+          </p>
+        </div>
+
+        <div class="jj-card p-8 rounded-xl reveal reveal-delay-1">
+          <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white mb-6">
+            <i data-lucide="bike" class="w-5 h-5"></i>
+          </div>
+          <span class="jj-tag mb-3">ATIVIDADE FÍSICA</span>
+          <h4 class="text-xl font-bold text-white mb-2">Andar de Bicicleta</h4>
+          <p class="text-xs text-neutral-400 leading-relaxed font-light">
+            Nos tempos livres, gosto de pedalar e curtir o ar livre para recarregar as energias, mantendo equilíbrio com a rotina de estudos em frente às telas.
+          </p>
+        </div>
+
+        <div class="jj-card p-8 rounded-xl reveal reveal-delay-2">
+          <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white mb-6">
+            <i data-lucide="gamepad" class="w-5 h-5"></i>
+          </div>
+          <span class="jj-tag mb-3">WEEKEND VIBES</span>
+          <h4 class="text-xl font-bold text-white mb-2">Jogos no Notebook</h4>
+          <p class="text-xs text-neutral-400 leading-relaxed font-light">
+            Aos fins de semana, jogo com amigos no notebook títulos competitivos e criativos: <strong class="text-white">Valorant</strong>, <strong class="text-white">Roblox</strong>, <strong class="text-white">Minecraft</strong> e <strong class="text-white">GTA V</strong>.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- SEÇÃO 03 // PROJETOS E TRABALHOS (Editorial Project Cards)-->
+  <!-- ========================================================= -->
+  <section id="projetos" class="py-28 max-w-[1400px] mx-auto px-6 lg:px-12">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 reveal">
+      <div>
+        <div class="font-mono text-xs tracking-widest text-neutral-400 uppercase mb-2">
+          [ 03 // FEATURED WORK & LABS ]
+        </div>
+        <h2 class="font-condensed text-5xl sm:text-7xl uppercase text-white leading-none">
+          PROJETOS <br>
+          <span class="text-neutral-400">DESENVOLVIDOS</span>
+        </h2>
+      </div>
+      <p class="text-neutral-400 max-w-md text-sm font-mono uppercase tracking-wider">
+        Aplicações web completas produzidas na disciplina GustaWeb com deploy em produção.
+      </p>
+    </div>
+
+    <!-- Cards Grandes em Estilo Revista / Lookbook -->
+    <div class="space-y-8">
+      
+      <!-- PROJETO 1: LOGIN -->
+      <div class="jj-card rounded-2xl p-8 sm:p-12 reveal">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-4">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="jj-tag">PROJETO 01</span>
+              <span class="font-mono text-xs text-neutral-400">DATA: 22 DE MAIO</span>
+              <span class="font-mono text-xs text-neutral-400">DISCIPLINA: PROGRAMAÇÃO</span>
+            </div>
+            
+            <h3 class="font-condensed text-4xl sm:text-6xl uppercase text-white">
+              TELA DE LOGIN EM REACT
+            </h3>
+            
+            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed font-light max-w-2xl">
+              Interface completa de autenticação de usuários desenvolvida com o framework <strong class="text-white">React</strong>. Conta com validações de inputs em tempo real, estados controlados, hierarquia de componentes e design responsivo pronto para integração com APIs de autenticação.
+            </p>
+
+            <div class="flex items-center gap-2 pt-2">
+              <span class="px-3 py-1 rounded bg-neutral-800 text-[11px] font-mono text-neutral-300">React</span>
+              <span class="px-3 py-1 rounded bg-neutral-800 text-[11px] font-mono text-neutral-300">JavaScript</span>
+              <span class="px-3 py-1 rounded bg-neutral-800 text-[11px] font-mono text-neutral-300">Vercel Deploy</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col justify-center items-start lg:items-end gap-4">
+            <div class="w-full h-40 bg-dark-800 border-editorial rounded-xl p-6 flex flex-col justify-between">
+              <span class="font-mono text-xs text-neutral-500">PROD STATUS: ONLINE</span>
+              <div class="flex items-center gap-2 text-white font-mono text-sm">
+                <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i>
+                <span>trabalho-gustavoweb1-1.vercel.app</span>
+              </div>
+            </div>
+
+            <a 
+              href="https://trabalho-gustavoweb1-1.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="jj-btn-primary px-8 py-3.5 rounded-full text-xs flex items-center gap-2">
+              <span>ACESSAR PROJETO AO VIVO</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROJETO 2: MURAL DA TURMA -->
+      <div class="jj-card rounded-2xl p-8 sm:p-12 border-white/20 reveal reveal-delay-1">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-4">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="jj-tag bg-white text-black font-bold">PROJETO 02 // DESTAQUE</span>
+              <span class="font-mono text-xs text-neutral-400">DATA: 11 DE SETEMBRO</span>
+              <span class="font-mono text-xs text-neutral-400">DISCIPLINA: PROGRAMAÇÃO</span>
+            </div>
+            
+            <h3 class="font-condensed text-4xl sm:text-6xl uppercase text-white">
+              MURAL INTERATIVO DA TURMA
+            </h3>
+            
+            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed font-light max-w-2xl">
+              Aplicação interativa desenvolvida com <strong class="text-white">Antigravity</strong> que apresenta de forma dinâmica e estruturada todos os alunos da turma de T.I. Organização em grade responsiva, dados biográficos dos estudantes e integração front-backend.
+            </p>
+
+            <div class="flex items-center gap-2 pt-2">
+              <span class="px-3 py-1 rounded bg-white/20 text-[11px] font-mono text-white font-bold">Antigravity</span>
+              <span class="px-3 py-1 rounded bg-neutral-800 text-[11px] font-mono text-neutral-300">Front & Backend</span>
+              <span class="px-3 py-1 rounded bg-neutral-800 text-[11px] font-mono text-neutral-300">Vercel Deploy</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col justify-center items-start lg:items-end gap-4">
+            <div class="w-full h-40 bg-dark-800 border-editorial rounded-xl p-6 flex flex-col justify-between">
+              <span class="font-mono text-xs text-neutral-500">PROD STATUS: ONLINE</span>
+              <div class="flex items-center gap-2 text-white font-mono text-sm">
+                <i data-lucide="users" class="w-5 h-5 text-amber-400"></i>
+                <span class="truncate">gustavoweb-front-bakcend3tarefa...</span>
+              </div>
+            </div>
+
+            <a 
+              href="https://gustavoweb-front-bakcend3tarefa.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="jj-btn-primary px-8 py-3.5 rounded-full text-xs flex items-center gap-2">
+              <span>ACESSAR MURAL AO VIVO</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROJETO 3: APP DE CELULAR -->
+      <div class="jj-card rounded-2xl p-8 sm:p-12 reveal reveal-delay-2">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-4">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="jj-tag">PROJETO 03</span>
+              <span class="font-mono text-xs text-neutral-400">DATA: 8 DE ABRIL</span>
+              <span class="font-mono text-xs text-neutral-400">DISCIPLINA: PROGRAMAÇÃO</span>
+            </div>
+            
+            <h3 class="font-condensed text-4xl sm:text-6xl uppercase text-white">
+              APP MOBILE: LOJA DE MÓVEIS
+            </h3>
+            
+            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed font-light max-w-2xl">
+              Interface orientada a dispositivos móveis desenvolvida em <strong class="text-white">React</strong>. Exibe um catálogo elegante de móveis à venda, com cards de produtos, filtragem visual, tipografia refinada e layout inspirado em aplicativos de comércio eletrônico modernos.
+            </p>
+
+            <div class="flex items-center gap-2 pt-2">
+              <span class="px-3 py-1 rounded bg-neutral-800 text-[11px] font-mono text-neutral-300">React</span>
+              <span class="px-3 py-1 rounded bg-neutral-800 text-[11px] font-mono text-neutral-300">Mobile-First</span>
+              <span class="px-3 py-1 rounded bg-neutral-800 text-[11px] font-mono text-neutral-300">E-Commerce UI</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col justify-center items-start lg:items-end gap-4">
+            <div class="w-full h-40 bg-dark-800 border-editorial rounded-xl p-6 flex flex-col justify-between">
+              <span class="font-mono text-xs text-neutral-500">PROD STATUS: ONLINE</span>
+              <div class="flex items-center gap-2 text-white font-mono text-sm">
+                <i data-lucide="smartphone" class="w-5 h-5 text-cyan-400"></i>
+                <span class="truncate">trabalho-gu-git-main-rafael21...</span>
+              </div>
+            </div>
+
+            <a 
+              href="https://trabalho-gu-git-main-rafael21-boobs-projects.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="jj-btn-primary px-8 py-3.5 rounded-full text-xs flex items-center gap-2">
+              <span>ACESSAR APP AO VIVO</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- SEÇÃO 04 // VÍDEO RDS EM DESTAQUE (Com o iframe exato)     -->
+  <!-- ========================================================= -->
+  <section id="video-destaque" class="py-24 bg-dark-900 border-editorial-t border-editorial-b">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      
+      <div class="max-w-3xl mb-12 reveal">
+        <div class="font-mono text-xs tracking-widest text-neutral-400 uppercase mb-2">
+          [ 04 // CINEMATIC MEDIA & CAMPUS ]
+        </div>
+        <h2 class="font-condensed text-5xl sm:text-7xl uppercase text-white leading-none">
+          CONHEÇA O COLÉGIO <br>
+          <span class="text-neutral-400">RAPHAEL DI SANTO</span>
+        </h2>
+        <p class="text-neutral-400 text-sm font-light mt-3">
+          Vídeo oficial do Ensino Médio Técnico do Colégio Raphael Di Santo, destacando a preparação profissional, a comunidade escolar e a formação tecnológica de excelência.
+        </p>
+      </div>
+
+      <!-- Container do Vídeo Solicitado com Frame Exato -->
+      <div class="jj-card rounded-2xl p-4 sm:p-8 reveal reveal-delay-1">
+        <div class="relative w-full aspect-video rounded-xl overflow-hidden bg-black border-editorial shadow-2xl">
+          <iframe 
+            id="rdsMainVideo"
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/orqpgpW-fsk?enablejsapi=1&origin=*&si=fExMwNkBYe-ofOq-" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4 border-editorial-t">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-white text-black font-condensed font-bold text-lg flex items-center justify-center">
+              RDS
+            </div>
+            <div>
+              <p class="font-bold text-sm text-white">Canal Oficial: TV RDS VIVAP</p>
+              <p class="text-xs text-neutral-400 font-mono">Ensino Médio Técnico Integrado • Jardim Garcia, Campinas - SP</p>
+            </div>
+          </div>
+
+          <a 
+            href="https://www.youtube.com/watch?v=orqpgpW-fsk" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="jj-btn-secondary px-5 py-2.5 rounded-full text-xs flex items-center gap-2">
+            <span>ASSISTIR NO YOUTUBE</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- SEÇÃO 05 // CONTATO / INQUIRIES (Minimalist High-Fashion) -->
+  <!-- ========================================================= -->
+  <section id="contato" class="py-28 max-w-[1400px] mx-auto px-6 lg:px-12">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <div class="lg:col-span-5 space-y-6 reveal">
+        <div class="font-mono text-xs tracking-widest text-neutral-400 uppercase">
+          [ 05 // INQUIRIES & CONTACT ]
+        </div>
+        <h2 class="font-condensed text-5xl sm:text-7xl uppercase text-white leading-none">
+          VAMOS <br>
+          <span class="text-neutral-400">CONVERSAR</span>
+        </h2>
+        <p class="text-neutral-400 text-sm font-light leading-relaxed">
+          Canal aberto para professores, avaliadores da disciplina GustaWeb e colegas interessados em projetos de tecnologia, redes de computadores e desenvolvimento web.
+        </p>
+
+        <div class="space-y-3 pt-4">
+          <div class="p-4 jj-card rounded-xl">
+            <span class="font-mono text-[11px] text-neutral-500 uppercase block mb-1">E-mail Acadêmico</span>
+            <a href="mailto:rafael.santanna@aluno.rds.br" class="text-white hover:text-neutral-300 text-sm font-mono transition-colors">
+              rafael.santanna@aluno.rds.br
+            </a>
+          </div>
+
+          <div class="p-4 jj-card rounded-xl">
+            <span class="font-mono text-[11px] text-neutral-500 uppercase block mb-1">Localização</span>
+            <span class="text-white text-sm">Campinas, São Paulo — Brasil</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulário de Contato Estilo Editorial -->
+      <div class="lg:col-span-7 jj-card rounded-2xl p-8 sm:p-12 reveal reveal-delay-1">
+        <form id="contactForm" class="space-y-6">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block font-mono text-xs uppercase text-neutral-400 tracking-wider mb-2">
+                01 // Nome Completo
+              </label>
+              <input 
+                type="text" 
+                id="name" 
+                required
+                placeholder="Prof. Gustavo / Avaliador" 
+                class="w-full bg-dark-900 border border-editorial rounded-lg px-4 py-3.5 text-white text-sm placeholder-neutral-600 focus:outline-none focus:border-white transition-colors">
+            </div>
+
+            <div>
+              <label for="email" class="block font-mono text-xs uppercase text-neutral-400 tracking-wider mb-2">
+                02 // Seu E-mail
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                required
+                placeholder="exemplo@rds.br" 
+                class="w-full bg-dark-900 border border-editorial rounded-lg px-4 py-3.5 text-white text-sm placeholder-neutral-600 focus:outline-none focus:border-white transition-colors">
+            </div>
+          </div>
+
+          <div>
+            <label for="subject" class="block font-mono text-xs uppercase text-neutral-400 tracking-wider mb-2">
+              03 // Assunto da Mensagem
+            </label>
+            <input 
+              type="text" 
+              id="subject" 
+              required
+              placeholder="Avaliação do Portfólio / GustaWeb" 
+              class="w-full bg-dark-900 border border-editorial rounded-lg px-4 py-3.5 text-white text-sm placeholder-neutral-600 focus:outline-none focus:border-white transition-colors">
+          </div>
+
+          <div>
+            <label for="message" class="block font-mono text-xs uppercase text-neutral-400 tracking-wider mb-2">
+              04 // Mensagem
+            </label>
+            <textarea 
+              id="message" 
+              rows="4" 
+              required
+              placeholder="Deixe seu feedback, comentário ou proposta..." 
+              class="w-full bg-dark-900 border border-editorial rounded-lg px-4 py-3.5 text-white text-sm placeholder-neutral-600 focus:outline-none focus:border-white transition-colors resize-none"></textarea>
+          </div>
+
+          <button 
+            type="submit" 
+            class="w-full jj-btn-primary py-4 rounded-full text-xs font-bold flex items-center justify-center gap-2">
+            <span>ENVIAR TRANSMISSÃO</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+
+          <!-- Feedback de Sucesso -->
+          <div id="formSuccess" class="hidden p-4 rounded-xl bg-neutral-900 border border-white/30 text-white text-xs font-mono text-center">
+            ✓ MENSAGEM REGISTRADA COM SUCESSO. OBRIGADO PELO CONTATO!
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- FOOTER (Minimalist Editorial Footer)                      -->
+  <!-- ========================================================= -->
+  <footer class="border-editorial-t py-12 bg-dark-950">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-4">
+        <span class="font-condensed text-3xl tracking-tight text-white">SANTANNA</span>
+        <span class="text-neutral-500 font-mono text-xs">COLÉGIO RAPHAEL DI SANTO © 2026</span>
+      </div>
+
+      <div class="flex items-center gap-6 font-mono text-xs text-neutral-400">
+        <span>GUSTAWEB</span>
+        <span>•</span>
+        <span>3º ANO T.I</span>
+        <span>•</span>
+        <span class="text-white">“SABEDORIA”</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- WIDGET FLUTUANTE DE ÁUDIO DE FUNDO (Estilo Minimalista)   -->
+  <!-- ========================================================= -->
+  <div id="audioWidget" class="audio-widget audio-playing cursor-pointer group" title="Clique para pausar ou reproduzir o áudio de fundo">
+    <div class="eq-bars">
+      <div class="eq-bar"></div>
+      <div class="eq-bar"></div>
+      <div class="eq-bar"></div>
+    </div>
+    <div class="flex flex-col">
+      <span class="text-[10px] font-mono tracking-widest uppercase text-neutral-400">Trilha Sonora</span>
+      <span id="audioTrackStatus" class="text-xs font-mono font-bold text-white flex items-center gap-1.5">
+        <span>TOCANDO</span>
+        <i data-lucide="volume-2" id="audioIcon" class="w-3.5 h-3.5 text-white"></i>
+      </span>
+    </div>
+  </div>
+
+  <!-- Player de Áudio do YouTube em Segundo Plano (Invisível) -->
+  <div id="bgAudioContainer" class="hidden pointer-events-none opacity-0 fixed -left-[9999px]">
+    <div id="bgAudioPlayer"></div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- JAVASCRIPT: Motion, IntersectionObserver & YouTube API    -->
+  <!-- ========================================================= -->
+  <!-- YouTube IFrame Player API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <script>
+    // Inicialização dos ícones Lucide
+    lucide.createIcons();
+
+    // 1. Navbar Scrolled State
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+        navbar.classList.remove('py-5');
+        navbar.classList.add('py-3');
+      } else {
+        navbar.classList.remove('scrolled');
+        navbar.classList.remove('py-3');
+        navbar.classList.add('py-5');
+      }
+    });
+
+    // 2. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // 3. Scroll Reveal Animation (Intersection Observer)
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: "0px 0px -40px 0px"
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // 4. Form Submit Handler (Simulação interativa)
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formSuccess.classList.remove('hidden');
+      contactForm.reset();
+      setTimeout(() => {
+        formSuccess.classList.add('hidden');
+      }, 5000);
+    });
+
+    // =========================================================
+    // 5. TELA DE CARREGAMENTO & MÚSICA DE FUNDO SINCRONIZADA
+    // Vídeo Trilha: https://www.youtube.com/watch?v=1uxu4SjN9ow
+    // =========================================================
+    let bgPlayer = null;
+    let rdsPlayer = null;
+    let isUserPaused = false;
+    let isPausedByVideo = false;
+    let isPausedByVisibility = false;
+    let siteEntered = false;
+
+    const preloader = document.getElementById('preloader');
+    const loaderBarFill = document.getElementById('loaderBarFill');
+    const loaderPercent = document.getElementById('loaderPercent');
+    const loaderStatusText = document.getElementById('loaderStatusText');
+    const enterBtn = document.getElementById('enterBtn');
+
+    const audioWidget = document.getElementById('audioWidget');
+    const audioTrackStatus = document.getElementById('audioTrackStatus');
+
+    // Simulação e sincronização do carregador
+    let currentProgress = 0;
+    const progressInterval = setInterval(() => {
+      if (currentProgress < 90) {
+        currentProgress += Math.floor(Math.random() * 15) + 8;
+        if (currentProgress > 90) currentProgress = 90;
+        updateLoaderProgress(currentProgress);
+      }
+    }, 180);
+
+    function updateLoaderProgress(val) {
+      if (val > 100) val = 100;
+      loaderBarFill.style.width = val + '%';
+      loaderPercent.textContent = val + '%';
+      if (val >= 100) {
+        loaderStatusText.textContent = "SISTEMA PRONTO";
+      }
+    }
+
+    function completeLoadingAndEnter() {
+      if (siteEntered) return;
+      siteEntered = true;
+      clearInterval(progressInterval);
+      updateLoaderProgress(100);
+
+      // Inicia a música de fundo com volume adequado
+      if (bgPlayer && typeof bgPlayer.playVideo === 'function') {
+        bgPlayer.setVolume(70);
+        bgPlayer.unMute();
+        bgPlayer.playVideo();
+      }
+
+      // Esconde o preloader com transição suave
+      setTimeout(() => {
+        preloader.classList.add('preloader-hidden');
+      }, 350);
+    }
+
+    // Clique no botão "Entrar no site com som"
+    enterBtn.addEventListener('click', () => {
+      completeLoadingAndEnter();
+    });
+
+    // Clique em qualquer lugar do preloader após carregamento
+    preloader.addEventListener('click', () => {
+      if (currentProgress >= 90) {
+        completeLoadingAndEnter();
+      }
+    });
+
+    function updateWidgetUI(isPlaying) {
+      if (isPlaying) {
+        audioWidget.classList.remove('audio-paused');
+        audioWidget.classList.add('audio-playing');
+        audioTrackStatus.innerHTML = `<span>TOCANDO</span><i data-lucide="volume-2" class="w-3.5 h-3.5 text-white"></i>`;
+      } else {
+        audioWidget.classList.remove('audio-playing');
+        audioWidget.classList.add('audio-paused');
+        audioTrackStatus.innerHTML = `<span>PAUSADO</span><i data-lucide="volume-x" class="w-3.5 h-3.5 text-neutral-400"></i>`;
+      }
+      lucide.createIcons();
+    }
+
+    // Inicialização da API do YouTube
+    window.onYouTubeIframeAPIReady = function() {
+      // Player de Música de Fundo (1uxu4SjN9ow)
+      bgPlayer = new YT.Player('bgAudioPlayer', {
+        height: '10',
+        width: '10',
+        videoId: '1uxu4SjN9ow',
+        playerVars: {
+          autoplay: 1,
+          loop: 1,
+          playlist: '1uxu4SjN9ow',
+          controls: 0,
+          showinfo: 0,
+          rel: 0
+        },
+        events: {
+          onReady: onBgPlayerReady,
+          onStateChange: onBgPlayerStateChange
+        }
+      });
+
+      // Player do Vídeo do Colégio RDS (orqpgpW-fsk)
+      rdsPlayer = new YT.Player('rdsMainVideo', {
+        events: {
+          onStateChange: onRdsPlayerStateChange
+        }
+      });
+    };
+
+    function onBgPlayerReady(event) {
+      event.target.setVolume(70);
+      event.target.unMute();
+      
+      // Quando o player estiver pronto, completa a barra e libera o site
+      updateLoaderProgress(100);
+      loaderStatusText.textContent = "CLIQUE PARA INICIAR";
+    }
+
+    function onBgPlayerStateChange(event) {
+      if (event.data === YT.PlayerState.PLAYING) {
+        updateWidgetUI(true);
+      } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
+        updateWidgetUI(false);
+      }
+    }
+
+    // Quando o vídeo oficial do Colégio Raphael Di Santo começa a tocar:
+    function onRdsPlayerStateChange(event) {
+      if (event.data === YT.PlayerState.PLAYING) {
+        // Pausa a música de fundo
+        if (bgPlayer && typeof bgPlayer.pauseVideo === 'function') {
+          isPausedByVideo = true;
+          bgPlayer.pauseVideo();
+        }
+      } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
+        // Retoma a música de fundo se não foi pausada manualmente nem pela aba
+        if (isPausedByVideo && !isUserPaused && !isPausedByVisibility) {
+          isPausedByVideo = false;
+          if (bgPlayer && typeof bgPlayer.playVideo === 'function') {
+            bgPlayer.playVideo();
+          }
+        }
+      }
+    }
+
+    // Quando o usuário sai ou volta para a aba do site (Page Visibility API)
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        // Saiu da aba: pausa a música e pausa o vídeo se estiver tocando
+        if (bgPlayer && typeof bgPlayer.pauseVideo === 'function') {
+          isPausedByVisibility = true;
+          bgPlayer.pauseVideo();
+        }
+        if (rdsPlayer && typeof rdsPlayer.pauseVideo === 'function') {
+          rdsPlayer.pauseVideo();
+        }
+      } else {
+        // Voltou para a aba: retoma a música apenas se o vídeo não estiver ativo e não foi pausada pelo usuário
+        if (isPausedByVisibility && !isUserPaused && !isPausedByVideo && siteEntered) {
+          isPausedByVisibility = false;
+          if (bgPlayer && typeof bgPlayer.playVideo === 'function') {
+            bgPlayer.playVideo();
+          }
+        }
+      }
+    });
+
+    // Controle manual através do Widget Flutuante
+    audioWidget.addEventListener('click', () => {
+      if (!bgPlayer || typeof bgPlayer.getPlayerState !== 'function') return;
+
+      const state = bgPlayer.getPlayerState();
+      if (state === YT.PlayerState.PLAYING) {
+        bgPlayer.pauseVideo();
+        isUserPaused = true;
+        updateWidgetUI(false);
+      } else {
+        bgPlayer.playVideo();
+        isUserPaused = false;
+        isPausedByVideo = false;
+        updateWidgetUI(true);
+      }
+    });
+  </script>
+
+</body>
+</html>
